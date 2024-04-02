@@ -7,13 +7,24 @@ velikonoce = {"klic" : "hodnoty",
               "Další slovník" : {"klic" : "hodnota"}
               }
 
-print(velikonoce)
-print(velikonoce["Datum"])
-print(velikonoce["symboly"][1])         # zanorovani > vypise 2. prvek vlozeneho seznamu  
+print(velikonoce)                       # vypise cely slovnik Velikonoce s hodnotami
+print(velikonoce["Datum"])              # vypise hodnotu klice DAtum - tj. 1. dubna 2024 
+print(velikonoce["symboly"][1])         # zanorovani > vypise 2. prvek vlozeneho seznamu Symboly
 print(velikonoce["pocasi"]["teplota"])  # zanorovani > vypise z vlozeneho slovniku (1. hran.zavorka) hodnotu teploty (2. hran. zavorka)
 
-velikonoce["pocasi"].update({"srazky": "zadne"})        # .UPDATE (pouze pro slovniky) - pridavani polozky do dilciho slovniku
+# aktualizace slovniku - přidání nové dvojice "klíč : hodnota" do podslovníku 
+# var. 1 - pomocí .update()
+velikonoce["pocasi"].update({"srazky": "zadne"})   # .UPDATE (pouze pro slovniky) - pridavani polozky do dilciho slovniku
 print(velikonoce)
 
-velikonoce["symboly"].append()                          # .APPEND (pouze pro seznamy) - pridani polozky do slovniku Symboly
+# var. 2 - pomocí rovná se =
+velikonoce["pocasi"]["tlak"] = "nizky"
+print(velikonoce)  
+
+# Přidání nového symbolu do seznamu velikonočních symbolů - pomocí .append()
+velikonoce["symboly"].append("kuratko")           # .APPEND (pouze pro seznamy) - pridani polozky do slovniku Symboly
 print(velikonoce)
+
+# Získání a výpis informace o koledování   
+koledovani = velikonoce["tradice"]["koledovani"]
+print(f"Koledování během Velikonoc: {'Ano' if koledovani else 'Ne'}")
