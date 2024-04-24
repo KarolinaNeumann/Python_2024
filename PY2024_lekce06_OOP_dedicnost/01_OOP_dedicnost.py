@@ -31,7 +31,7 @@ print(jitka)
 # print(janina)     # pokud neni definovano __str__, prejme trida Manager vse od Eployee > nevypise podrizenen a auto
                     # vypise tvar z Employee: "janina pracuje na pozici manazerka kurzu"
 
-# vyuziti dedicnost - metoda super() říká dkud si má brát.(tečka) a co si má brát (za tečkou)
+# vyuziti dedicnost - metoda super() říká odkud si má brát.(tečka) a co si má brát (za tečkou)
 class Manager(Employee):
     def __init__(self, name, position, subordinates, car):
         super().__init__(name, position)       # SUPER()= zkopiruj z Employee (ř. 30)
