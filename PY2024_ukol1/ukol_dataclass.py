@@ -1,7 +1,8 @@
 # Rozvoz pizzy
 
 from dataclasses import dataclass, field  
-from typing import Dict   
+from typing import Dict 
+from typing import List  
 
 @dataclass  
 class Item:
@@ -38,3 +39,22 @@ class Drink(Item):
 
     def __str__(self):
         return f"Nápoj " + super().__str__() + f" (objem nápoje je {self.volume} ml)"
+
+
+@dataclass
+class Order:
+    customer_name: str                    # Jméno zákazníka
+    delivery_address: str                 # Adresa doručení 
+    items: List[Item]                     # Seznam položek v objednávce
+    status: str = "Nová objednávka"       # Stav objednávky 
+
+    def mark_delivered(self):
+        self.status = "Doručeno"
+
+    def __str__(self):
+        return f"Objednávka pro {self.customer_name} s adresou doručení {self.delivery_address} je {self.status}. Doručeno bylo: {self.items}."
+    
+
+@dataclass
+class DeliveryPerson:
+    
