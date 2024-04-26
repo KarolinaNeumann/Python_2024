@@ -14,7 +14,7 @@ class Item:
 class Pizza(Item):
     ingredients: dict   # ingredience: vaha (g)
 
-def add_extra(self, ingredient, quantity, price_per_ingredient):
+    def add_extra(self, ingredient, quantity, price_per_ingredient):
         if self.ingredients[ingredient] > 0: 
             total_pizza_price = super().price + (quantity * price_per_ingredient)
             return total_pizza_price
