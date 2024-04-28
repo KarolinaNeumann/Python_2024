@@ -24,9 +24,11 @@ class Pizza(Item):
     def __str__(self):
         return f"Pizza " + super().__str__() 
 
+# Vytvoření instance pizzy a manipulace s ní
 margarita = Pizza("Margarita", 200, {"sýr": 100, "rajčata": 150})
 print(margarita)
 print(margarita.add_extra("olivy", 50, 10))
+
 
 @dataclass
 class Drink(Item):
@@ -35,7 +37,7 @@ class Drink(Item):
     def __str__(self):
         return f"Nápoj " + super().__str__() + f" (objem nápoje je {self.volume} ml)"
 
-
+# Vytvoření instance nápoje
 cola = Drink("Cola", 1.5, 500)
 print(cola)
 
@@ -52,6 +54,7 @@ class Order:
     def __str__(self):
         return f"{self.status} pro {self.customer_name} s adresou doručení {self.delivery_address} obsahuje: {self.items}."
     
+# Vytvoření a výpis objednávky
 order = Order("Jan Novák", "Pražská 123", [margarita, cola])
 print(order)
 
