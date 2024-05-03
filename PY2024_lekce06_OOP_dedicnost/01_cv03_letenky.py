@@ -27,7 +27,7 @@ class TrainTicket(Ticket):
         self.fare_class = fare_class
 
     def get_price(self):
-        if self.pafe_class == "economy":
+        if self.fare_class == "economy":
             return self.base_price
         else:
             return 1.3 * self.base_price 

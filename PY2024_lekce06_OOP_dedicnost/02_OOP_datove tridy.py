@@ -10,7 +10,7 @@
 # class Employee:                                
 #   def __init__(self, name, position):   
 #       self.name = name
-#        self.position = position 
+#       self.position = position 
 
 #    def __str__(self):                   
 #         return f"Zaměstnanec {self.name} pracuje na pozici {self.position}."
@@ -65,7 +65,7 @@ print(isinstance(olga, Manager))   # True – z příkladu výše: Olga je objek
 print(isinstance(olga, Employee))   # True – ptž třída Manager dědí od Employee
 
 # funkce hasattr() - kontrola, zda má nějaký objekt atribut nebo metodu daného jména, vrátí True/False
-print(hasatrr(olga,"car"))    # True = Olga má auto (atribut car je ve třídě manager)
+print(hasattr(olga,"car"))    # True = Olga má auto (atribut car je ve třídě manager)
 
 # funkce getattr() – umožňuje získat hodnotu atributu objektu na základě jeho názvu. 
 # Pokud funkci zadáme dva parametry (objekt a název atributu), funguje jako tečková notace,
