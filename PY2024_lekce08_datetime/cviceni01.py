@@ -5,7 +5,7 @@
 # tj. na první místo napiš měsíc, dále den a nakonec rok, jako oddělovače použij 
 # lomítka. Čas vypisovat nemusíš.
 
-from datetime import datetime
+from datetime import datetime, timedelta
 
 start_Apolla = datetime(1969, 7, 16, 14, 32)
 print(start_Apolla)
