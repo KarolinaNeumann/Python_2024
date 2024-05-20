@@ -21,4 +21,4 @@ for runner in runners:
     if runner['casy']['oficialni'] != 'DNF':    # != není 
         finishers.append([runner['jmeno'], runner['casy']['oficialni']])  # přidá jméno a čas do seznamu finishers, pokud závodník dokončil závod
 
-print(finishers[1])   #cci vědět stříbrnou medaily - tj. 2. místo v závodu - tj. index 1
+print(finishers[1])   # chci vědět stříbrnou medaily - tj. 2. místo v závodu - tj. index 1
