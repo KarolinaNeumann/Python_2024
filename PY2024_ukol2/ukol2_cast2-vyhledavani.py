@@ -19,13 +19,13 @@ response = requests.post(
 data = response.json()
 
 # pri zadani vstupu: "jakub neumann" vypise 15 subjektu + info o nich
-#print(data)
+# print(data)
 
 # pro vypis u 1. subjektu
 # print(data["ekonomickeSubjekty"][0]["ico"])
 # print(data["ekonomickeSubjekty"][0]["obchodniJmeno"])
 
-# vypis pommoci cyklu
+# vypis pomoci cyklu
 
 for subjekt in data["ekonomickeSubjekty"]:
    print()
