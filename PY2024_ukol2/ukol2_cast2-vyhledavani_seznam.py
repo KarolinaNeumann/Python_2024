@@ -1,4 +1,5 @@
 # zkouska vyhledani subjektu jabuk neumann - nalezeno 15 subjektu - vypis struktury 1. zaznamu
+
 data = {
         'pocetCelkem': 15, 
         'ekonomickeSubjekty': 
@@ -136,3 +137,6 @@ data = {
                 #dalsi subj {'ico': '05959845'}
             ]
         }
+
+print(data["ekonomickeSubjekty"][0]["ico"])
+print(data["ekonomickeSubjekty"][0]["obchodniJmeno"])

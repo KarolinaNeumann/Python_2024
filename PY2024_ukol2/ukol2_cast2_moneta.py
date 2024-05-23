@@ -22,4 +22,3 @@ response = requests.post(
 # print(response) # ověření Response (kod 200 - ok)
 data = response.json()
 print(data)
-

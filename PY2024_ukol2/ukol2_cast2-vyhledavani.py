@@ -17,5 +17,16 @@ response = requests.post(
 
 # print(response) # ověření Response (kod 200 - ok)
 data = response.json()
-print(data) # pri zadani vstupu: "jakub neumann" vypise 15 subjektu + info o nich
+
+# pri zadani vstupu: "jakub neumann" vypise 15 subjektu + info o nich
+#print(data)
+
+# pro vypis u 1. subjektu
+# print(data["ekonomickeSubjekty"][0]["ico"])
+# print(data["ekonomickeSubjekty"][0]["obchodniJmeno"])
+
+# vypis pommoci cyklu
+
+for subjekt in data["ekonomickeSubjekty"]:
+   print()
 
