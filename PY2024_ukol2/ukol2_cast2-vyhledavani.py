@@ -18,15 +18,11 @@ response = requests.post(
 # print(response) # ověření Response (kod 200 - ok)
 data = response.json()
 
-# pri zadani vstupu: "jakub neumann" vypise 15 subjektu + info o nich
-# print(data)
-
-# pro vypis u 1. subjektu
-# print(data["ekonomickeSubjekty"][0]["ico"])
-# print(data["ekonomickeSubjekty"][0]["obchodniJmeno"])
+# vypis poctu nalezenych subjketu
+pocet_subj = len(data["ekonomickeSubjekty"])
+print(f"Počet nalezených subjektů: {pocet_subj}")
 
 # vypis pomoci cyklu
-
 for subjekt in data["ekonomickeSubjekty"]:
-   print()
+   print(subjekt["obchodniJmeno"] + ", " + subjekt["ico"])
 
