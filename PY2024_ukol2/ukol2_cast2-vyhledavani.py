@@ -1,4 +1,4 @@
-import requests, json
+import requests
 
 # vstup terminal
 subj_name = input("Zadejte název subjektu: ")
